@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatile" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/navbar.css">
+  <link rel="stylesheet" href="css/eventGrid.css">
+  <title><%= title %></title>
+  <% if (events.length < 3) { %> 
+    <style>
+      div#grid {
+        gap: 0px;
+      }
+
+      div.grid-item {
+        margin: 10px;
+      }
+    </style>
+  <% } %>
+</head>
+<body>
+<%- include('../includes/navbar') %>
+<% if (events.length > 0) { %>
+  <%- include('../includes/eventGrid') %>
+<% } else { %>
+  <p class="msg">
+    <%= msg %>
+  </p>
+<% } %>
+</body>
+</html>

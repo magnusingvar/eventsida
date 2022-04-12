@@ -1,0 +1,96 @@
+#content {
+  margin: 10px 0 0 0;
+  text-align: center;
+  padding: 5px; 
+}
+
+h1 {
+  display: inline-block;
+  margin: 0
+}
+
+form {
+  color: #fff;
+}
+
+#event-name, #event-description, #event-date,
+.edit-container, .signup-container,
+.withdraw-container{
+  margin: 5px 0 5px 0;
+}
+
+.container {
+  position: relative;
+  display: inline-block;
+  width: 396px;
+  height: 396px;
+  margin: 9px 0 5px 0;
+  border: 1px solid #000;
+  border-radius: 8px;
+}
+
+.container .image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: darkgrey;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+@media screen and (max-width: 900px) {
+
+  .container {
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 150px;
+    min-height: 150px;
+    width: 100%;
+    height: 100%;
+  }
+
+  form #withdraw-btn {
+    width: auto;
+    height: auto;
+    white-space: pre-wrap;
+  }
+}
+
+@media screen and (max-width: 200px) {
+  #event-name {
+    font-size: inherit;
+  }
+  
+  .container {
+    width: 150px;
+    height: 150px;
+  }
+
+
+  form #withdraw-btn {
+    width: auto;
+    height: auto;
+    white-space: pre-wrap;
+  }
+}
+
+form#edit {
+  position: relative;
+}
+
+form#update, form#create, form#upload {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}

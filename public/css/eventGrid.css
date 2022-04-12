@@ -1,0 +1,97 @@
+#grid-container {
+  display: grid;
+  text-align: center;
+  justify-content: center;
+}
+
+#grid-container > h2 {
+  margin: 12px 0;
+}
+
+#newevents #grid-container #grid{
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  width: 100%;
+}
+
+#grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(3, auto);
+  width: 100%;
+  padding: 0 0 20px 0;
+}
+
+.grid-item:hover {
+  opacity: 0.9;
+}
+
+.image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 220px;
+  margin: 0px 0px 15px 0px;
+  background: darkgray;
+  border-radius: 9px;
+  border: 1px solid #000;
+  border-radius: 9px;
+}
+
+.image > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 700px) {
+
+  div#newevents > div#grid, div#grid{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    width: 100%;
+  }
+
+  div.grid-item {
+    width: auto;
+    height: auto;
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    margin: 0px 0px 15px 0px;
+  }
+  
+  .image img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 320px) {
+
+  div#newevents > div#content > div#grid-container > div#grid, 
+  div#grid {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+    gap: 10px;
+    width: 100%;
+  }
+
+  div.grid-item {
+    width: auto;
+    height: auto;
+  }
+  
+  .image {
+    width: 150px;
+    height: 150px;
+    margin: 0px 0px 15px 0px;
+  }
+  
+  .image img {
+    width: 100%;
+  }
+}

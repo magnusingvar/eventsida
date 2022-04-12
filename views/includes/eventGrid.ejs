@@ -1,0 +1,30 @@
+<div id="content">
+  <div id="grid-container">
+    <h2><%= header %></h2>
+    <div id="grid">
+      <% for (let i = 0; i < events.length; i += 1) { %>
+        <div class="grid-item">
+          <a href="/event?id=<%= events[i].id %>">
+            <div class="container">
+              <div class="image">
+                <% if (events[i].image != null) { %>
+                  <img src="images/uploads/<%- events[i].image %>">
+                <% } else { %>
+                  <img src="images/blank.jpeg">
+                <% } %>
+              </div>
+              <div class="title">
+                <h3>
+                  <%= events[i].name %>
+                </h3>
+              </div>
+            </div>
+            <p>
+              <span><%= events[i].day %> <%= events[i].month %> <%= events[i].year %></span>
+            </p>
+          </a>
+          </div>
+      <% } %>
+    </div>
+  </div>
+</div>
